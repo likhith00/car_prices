@@ -4,7 +4,7 @@ base:
   target_col: price
 
 data_source:
-  s3_source: dat_given/car_prices.csv
+  s3_source: data_given/car_prices.csv
 
 load_dataset:
   raw_dataset_csv: data/raw/car_prices.csv
