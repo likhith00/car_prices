@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  load_data:
+    cmd: python src/load_data.py --config=params.yaml
+    deps:
+    - path: data_given/car_prices.csv
+      md5: 3ad389bc1c1d5c9c868c64ba9e590a44
+      size: 26717
+    - path: src/get_data.py
+      md5: a7ec5be96938556817047019296ce102
+      size: 584
+    - path: src/load_data.py
+      md5: a3d0ece2c34615bf4810b3a6fb4deb0d
+      size: 600
+    outs:
+    - path: data/raw/car_prices.csv
+      md5: 66d424c4cee1192fefee05fe3c7175f8
+      size: 27405
