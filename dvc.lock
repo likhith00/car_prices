@@ -16,3 +16,19 @@ stages:
     - path: data/raw/car_prices.csv
       md5: 66d424c4cee1192fefee05fe3c7175f8
       size: 27405
+  split_data:
+    cmd: python src/split_data.py --config=params.yaml
+    deps:
+    - path: data/raw/car_prices.csv
+      md5: 66d424c4cee1192fefee05fe3c7175f8
+      size: 27405
+    - path: src/split_data.py
+      md5: fefb0ccdf8d264c8befeefc44fb01cb5
+      size: 941
+    outs:
+    - path: data/processed/test_car_prices.csv
+      md5: ed551a80d88bd4c01685af9b667cb805
+      size: 5721
+    - path: data/processed/train_car_prices.csv
+      md5: a1e205fea9fe6e2a8e911c6eee9fd292
+      size: 21951
