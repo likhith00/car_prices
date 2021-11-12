@@ -15,3 +15,13 @@ stages:
     outs:
       - data/processed/train_car_prices.csv
       - data/processed/test_car_prices.csv
+  train_and_evaluate:
+    cmd: python src/train_and_evaluate.py
+    deps:
+      - src/train_and_evaluate.py
+      - data/processed/train_car_prices.csv
+      - data/processed/test_car_prices.csv
+    outs:
+      - reports/params.json
+      - reports/scores.json
+      - saved_models/model.joblib

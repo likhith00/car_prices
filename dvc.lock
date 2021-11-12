@@ -10,25 +10,47 @@ stages:
       md5: a7ec5be96938556817047019296ce102
       size: 584
     - path: src/load_data.py
-      md5: a3d0ece2c34615bf4810b3a6fb4deb0d
-      size: 600
+      md5: 252ea534d22593973793cae14e348fd8
+      size: 868
     outs:
     - path: data/raw/car_prices.csv
-      md5: 66d424c4cee1192fefee05fe3c7175f8
-      size: 27405
+      md5: f9a3b0a5c6bd4aefa508969608c34293
+      size: 19495
   split_data:
     cmd: python src/split_data.py --config=params.yaml
     deps:
     - path: data/raw/car_prices.csv
-      md5: 66d424c4cee1192fefee05fe3c7175f8
-      size: 27405
+      md5: f9a3b0a5c6bd4aefa508969608c34293
+      size: 19495
     - path: src/split_data.py
       md5: fefb0ccdf8d264c8befeefc44fb01cb5
       size: 941
     outs:
     - path: data/processed/test_car_prices.csv
-      md5: ed551a80d88bd4c01685af9b667cb805
-      size: 5721
+      md5: fd7f817e12aef975ce8cc91d39a23643
+      size: 4122
     - path: data/processed/train_car_prices.csv
-      md5: a1e205fea9fe6e2a8e911c6eee9fd292
-      size: 21951
+      md5: 3011df4a6bfa4ed67d1fc6952c4fa4e4
+      size: 15640
+  train_and_evaluate:
+    cmd: python src/train_and_evaluate.py
+    deps:
+    - path: data/processed/test_car_prices.csv
+      md5: fd7f817e12aef975ce8cc91d39a23643
+      size: 4122
+    - path: data/processed/train_car_prices.csv
+      md5: 3011df4a6bfa4ed67d1fc6952c4fa4e4
+      size: 15640
+    - path: src/train_and_evaluate.py
+      md5: 701554323d0c0cb45a9893b1b1eae4a1
+      size: 2477
+    outs:
+    - path: reports/params.json
+      md5: 26312262403ce17dfd7e69952bb73470
+      size: 46
+    - path: reports/scores.json
+      md5: 5a49103dc2b327bb8b59d6951b83bb63
+      size: 96
+    - path: saved_models/model.joblib
+      md5: 09d7ccb2daadfeb2bd5a2c6d6fc59076
+      size: 1635
