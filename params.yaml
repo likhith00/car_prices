@@ -1,0 +1,24 @@
+base:
+  project: carprices_prediction
+  random_state: 42
+  target_col: price
+
+data_source:
+  s3_source: dat_given/car_prices.csv
+
+load_dataset:
+  raw_dataset_csv: data/raw/car_prices.csv
+
+split_data:
+  train_path: data/processed/train_car_prices.csv
+  test_path: data/processed/test_car_prices.csv
+  test_size: 0.2
+
+Estimators:
+  ElasticNet:
+    params:
+      alpha: 0.88
+      l1_ratio: 0.89
+
+model_dir: saved_models
+
