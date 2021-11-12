@@ -21,7 +21,13 @@ stages:
       - src/train_and_evaluate.py
       - data/processed/train_car_prices.csv
       - data/processed/test_car_prices.csv
-    outs:
-      - reports/params.json
-      - reports/scores.json
+    params:
+      - Estimators.ElasticNet.params.alpha
+      - Estimators.ElasticNet.params.l1_ratio
+    metrics:
+      - reports/params.json:
+          cache: false
+      - reports/scores.json:
+          cache: false
+    outs: 
       - saved_models/model.joblib
