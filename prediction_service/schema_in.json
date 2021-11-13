@@ -1,0 +1,102 @@
+{
+    "car_ID": {
+        "min": 1.0,
+        "max": 205.0
+    },
+    "symboling": {
+        "min": -2.0,
+        "max": 3.0
+    },
+    "CarName": {
+        "min": 0.0,
+        "max": 146.0
+    },
+    "fueltype": {
+        "min": 0.0,
+        "max": 1.0
+    },
+    "aspiration": {
+        "min": 0.0,
+        "max": 1.0
+    },
+    "doornumber": {
+        "min": 0.0,
+        "max": 1.0
+    },
+    "carbody": {
+        "min": 0.0,
+        "max": 4.0
+    },
+    "drivewheel": {
+        "min": 0.0,
+        "max": 2.0
+    },
+    "enginelocation": {
+        "min": 0.0,
+        "max": 1.0
+    },
+    "wheelbase": {
+        "min": 86.6,
+        "max": 120.9
+    },
+    "carlength": {
+        "min": 141.1,
+        "max": 208.1
+    },
+    "carwidth": {
+        "min": 60.3,
+        "max": 72.3
+    },
+    "carheight": {
+        "min": 47.8,
+        "max": 59.8
+    },
+    "curbweight": {
+        "min": 1488.0,
+        "max": 4066.0
+    },
+    "enginetype": {
+        "min": 0.0,
+        "max": 6.0
+    },
+    "cylindernumber": {
+        "min": 0.0,
+        "max": 6.0
+    },
+    "enginesize": {
+        "min": 61.0,
+        "max": 326.0
+    },
+    "fuelsystem": {
+        "min": 0.0,
+        "max": 7.0
+    },
+    "boreratio": {
+        "min": 2.54,
+        "max": 3.94
+    },
+    "stroke": {
+        "min": 2.07,
+        "max": 4.17
+    },
+    "compressionratio": {
+        "min": 7.0,
+        "max": 23.0
+    },
+    "horsepower": {
+        "min": 48.0,
+        "max": 288.0
+    },
+    "peakrpm": {
+        "min": 4150.0,
+        "max": 6600.0
+    },
+    "citympg": {
+        "min": 13.0,
+        "max": 49.0
+    },
+    "highwaympg": {
+        "min": 16.0,
+        "max": 54.0
+    }
+}
